@@ -1,0 +1,11 @@
+# package directories
+node_modules
+cfn-template.packaged.yml
+coverage
+dist
+.vscode
+tsconfig.tsbuildinfo
+docs
+deploy.sh
+.DS_Store
+yarn-error.log
