@@ -81,7 +81,7 @@ export const handler = createHandler({
 #### constant
 
 ```ts
-import { createHandler, localObject } from 'cognito-proxy';
+import { createHandler, constant } from 'cognito-proxy';
 
 
 export const handler = createHandler({
