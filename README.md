@@ -4,7 +4,7 @@ A proxy that can be used to transparently front any cognito client that can be d
 
 This proxy is based on AWS Security Blog post [Protect public clients for Amazon Cognito by using an Amazon CloudFront proxy](https://aws.amazon.com/blogs/security/protect-public-clients-for-amazon-cognito-by-using-an-amazon-cloudfront-proxy/.).
 
-With this proxy you can go beyond Cognito's Advanced Security and implement security controls on the proxy itself or through WAF, like geofencing, IP-based throttling, etc. 
+With this proxy you can go beyond Cognito's Advanced Security and implement security controls on the proxy itself or through WAF. 
 
 ![Proxy](./assets/proxy.png)
 
@@ -25,12 +25,10 @@ export const handler = createHandler({
 
 ### Strategies
 
-The `secretLookup` function can be sync or `async`. You can implement any strategy to lookup your secrets. For your convenience, this package comes with a couple of strategies:
+The `secretLookup` function implements a strategy to lookup your secrets. For your convenience, this package comes with a couple of strategies:
 
 - fetchFromCognito
 - fetchFromSSM
-- localObject
-- localMap
 - constant
 
 #### fetchFromCognito
@@ -80,29 +78,18 @@ export const handler = createHandler({
 })
 ```
 
-#### localObject
+#### constant
 
 ```ts
 import { createHandler, localObject } from 'cognito-proxy';
 
 
 export const handler = createHandler({
-    secretLookup: localObject({'my-client-id': 'my-client-secret'})
+    secretLookup: constant({'my-client-id': 'my-client-secret'})
 })
 ```
 
-#### localMap
-
-```ts
-import { createHandler, localMap } from 'cognito-proxy';
-
-
-export const handler = createHandler({
-    secretLookup: localMap(new Map([['my-client-id', 'my-client-secret']])
-})
-```
-
-#### constant
+It can also be a string.
 
 ```ts
 import { createHandler, constant } from 'cognito-proxy';
@@ -113,10 +100,7 @@ export const handler = createHandler({
 })
 ```
 
-### Cloudformation
 
-TBD
+## Roadmap
 
-### CDK
-
-TBD
+[] Provide ready-made CloudFormation and CDK recipes for deployment.
