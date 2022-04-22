@@ -1,5 +1,5 @@
 
-# Contributor Covenant Code of Conduct
+# Choco's Contributor Covenant Code of Conduct
 
 ## Our Pledge
 
