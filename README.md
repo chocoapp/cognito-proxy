@@ -2,11 +2,11 @@
 
 # Cognito proxy
 
-A proxy that can be used to transparently front any cognito client that can be deployed as lambda@edge.
+A proxy that can be used transparently in front any cognito client that can be deployed as lambda@edge.
 
 This proxy is based on AWS Security Blog post [Protect public clients for Amazon Cognito by using an Amazon CloudFront proxy](https://aws.amazon.com/blogs/security/protect-public-clients-for-amazon-cognito-by-using-an-amazon-cloudfront-proxy/.).
 
-With this proxy you can go beyond Cognito's Advanced Security and implement security controls on the proxy itself or through WAF. 
+With this proxy you can go beyond Cognito's Advanced Security and implement security controls on the proxy itself or through [Web Application Firewall](https://aws.amazon.com/waf/). 
 
 ![Proxy](./assets/proxy.png)
 
@@ -27,7 +27,7 @@ export const handler = createHandler({
 
 ### Strategies
 
-The `secretLookup` function implements a strategy to lookup your secrets. For your convenience, this package comes with a couple of strategies:
+The `secretLookup` function implements a strategy to lookup your secrets. For your convenience, this package has with the following strategies:
 
 - fetchFromCognito
 - fetchFromSSM
@@ -35,7 +35,7 @@ The `secretLookup` function implements a strategy to lookup your secrets. For yo
 
 #### fetchFromCognito
 
-In the following case the strategy will perform the [DescribeUserPoolClient](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPoolClient.html) action in Cognito to lookup the secret. 
+In the following case the strategy will perform the [DescribeUserPoolClient](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPoolClient.html) action in Cognito to lookup the secret.
 
 The `fetchFromCognito` strategy needs to receive an object mapping all supported clientIds to its pool ids.
 
@@ -103,7 +103,7 @@ export const handler = createHandler({
 ```
 
 
-## Roadmap
+## Road map
 
 [] Provide ready-made CloudFormation and CDK recipes for deployment.
 
