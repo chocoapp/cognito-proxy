@@ -19,7 +19,7 @@ import { createHandler } from 'cognito-proxy';
 
 export const handler = createHandler({
     secretLookup: async (clientId) => {
-        const clientSecret = await secretLookupCustomImplementation(clintId)
+        const clientSecret = await secretLookupCustomImplementation(clientId)
         return clientSecret;
     }
 })
