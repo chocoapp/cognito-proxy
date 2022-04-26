@@ -1,0 +1,17 @@
+{
+  "extends": "https://raw.githubusercontent.com/todogroup/repolinter/master/rulesets/default.json",
+  "rules": {
+    "github-issue-template-exists": {
+      "level": "off"
+    },
+    "github-pull-request-template-exists": {
+      "level": "off"
+    },
+    "source-license-headers-exist": {
+      "level": "off"
+    },
+    "support-file-exists": {
+      "level": "off"
+    }
+  }
+}

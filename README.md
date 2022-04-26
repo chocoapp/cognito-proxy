@@ -1,3 +1,5 @@
+
+
 # Cognito proxy
 
 A proxy that can be used to transparently front any cognito client that can be deployed as lambda@edge.
@@ -104,3 +106,15 @@ export const handler = createHandler({
 ## Roadmap
 
 [] Provide ready-made CloudFormation and CDK recipes for deployment.
+
+## Choco open source
+
+<div style="background: rgba(0, 0, 50, 0.1)">
+
+- [Contributing](./docs/CONTRIBUTING.md)
+- [Code of Conduct](./CODE_OF_CONDUCT.md)
+- [License](./LICENSE.md)
+- [Security](./docs/SECURITY.md)
+- [Changelog](./CHANGELOG.md)
+
+</div>
