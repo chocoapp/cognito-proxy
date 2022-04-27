@@ -2,7 +2,7 @@
 
 # Cognito proxy
 
-A proxy that can be used transparently in front any cognito client that can be deployed as lambda@edge.
+A proxy that can be used transparently to front any cognito client. It can be deployed as lambda@edge.
 
 This proxy is based on AWS Security Blog post [Protect public clients for Amazon Cognito by using an Amazon CloudFront proxy](https://aws.amazon.com/blogs/security/protect-public-clients-for-amazon-cognito-by-using-an-amazon-cloudfront-proxy/.).
 
