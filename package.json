@@ -1,5 +1,5 @@
 {
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "Apache-2.0",
   "name": "cognito-proxy",
   "main": "dist/index.js",
@@ -21,6 +21,7 @@
     "repolint": "repolinter lint ."
   },
   "dependencies": {
+    "@types/aws-lambda": "^8.10.88",
     "aws-sdk": "^2.1046.0"
   },
   "files": [
@@ -28,7 +29,6 @@
     "README.md"
   ],
   "devDependencies": {
-    "@types/aws-lambda": "^8.10.88",
     "@types/jest": "^27.0.3",
     "@typescript-eslint/eslint-plugin": "^5.8.0",
     "@typescript-eslint/parser": "^5.8.0",
