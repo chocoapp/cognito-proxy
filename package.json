@@ -22,7 +22,8 @@
   },
   "dependencies": {
     "@types/aws-lambda": "^8.10.88",
-    "aws-sdk": "^2.1046.0"
+    "aws-sdk": "^2.1046.0",
+    "simple-git": "^3.16.0"
   },
   "files": [
     "dist",
